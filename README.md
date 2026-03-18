@@ -9,7 +9,7 @@
 
 ## 特性
 
-- 完全兼容 WebDAV 协议
+- 完全兼容 WebDAV 协议1
 - 基于 Cloudflare Workers，无需管理服务器
 - 使用 Cloudflare R2 作为存储后端（免费额度慷慨）
 - 支持基本的身份验证
