@@ -25,6 +25,8 @@ jobs:
           cat wrangler.toml
 
       - name: Build & Deploy Worker
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  uses: cloudflare/wrangler-action@v3
+  with:
+    apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    # 强制让它只访问这一个账号，跳过其他探测步骤
+    command: deploy --account-id=${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
